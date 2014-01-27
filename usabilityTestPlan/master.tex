@@ -1,0 +1,137 @@
+\documentclass[a4paper]{article}
+\usepackage[margin=1in]{geometry}
+
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage[auth-sc,affil-sl]{authblk}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage{hyperref}
+\usepackage{enumitem}
+
+\title{Usability Test Plan for CP's Website}
+\author[1]{Luís  Cruz}
+\affil[1]{MAP-i\\ Joint Doctoral Programme in Computer Science}
+\date{January 22, 2014}
+
+\begin{document}
+\maketitle
+
+\section{Introduction}
+
+This document serves as the session moderator's script, outlining the series of activities participants undertake during the usability test. This document was iteratively designed through some pilot tests, in order to get the most from the participants.
+
+Four tasks are described with the detailed steps for completing them, and for each of them the outlines for the post-task interviews are provided. 
+ 
+\section{Tasks}
+
+The computer is recording the screen and audio and set with an open browser to: \url{http://www.cp.pt/}.
+
+In this section the tasks are detailed with all the necessary steps in order to help the moderator to help the user. However, unless the user needs some help he/she is not supposed to read it.
+
+During each task, the moderator reports some variables in the provided Logging Form Sheet, and whenever a task completes a small interview is proceeded between the moderator and the participant.
+
+\paragraph{Task 1 - Select the English Version} In this task the user has to change the language of the application to English:
+
+\begin{enumerate}[label=\roman*.]
+  \item Go to the CP.pt homepage (url: \url{http://www.cp.pt/}) 
+  \item Select the british flag on the top bar.
+\end{enumerate}
+\subparagraph{Completion Criteria:} The website has to be in the English language.
+
+\subparagraph{Post-task Interview:}
+
+\begin{enumerate}[label=1.\theenumi .]
+  \item Is this the first time you visit this website?
+  \item Please give me your first impressions about the layout and design of the website.
+  \item How easy or difficult was it for you to accomplish this task?
+  \item Was there something specific that made this task easy or difficult?
+\end{enumerate}
+
+\paragraph{Task 2 - Going from Braga to Aveiro} In this task the user is asked to find when is the next train from Braga to Aveiro, how much is the ticket and where is it necessary to switch lines. In order to accomplish this task, the user has to:
+
+\begin{enumerate}[label=\roman*.]
+  \item Go to the CP.pt homepage
+  \item Find the form through the tab ``Timetables and Prices" of the right panel.
+  \item Introduce the details of the trip, from Braga to Aveiro in the present day. Optionally, the time can be set, and it is not necessary to specify the return trip.
+  \item Select one of the listed trips, by selecting ``see" and/or ``detail" links. 
+  \item Report the time of departure, the price of the ticket, the duration and how long will the passenger have to wait in the station, and when is the departure of the second train.
+\end{enumerate}
+
+\subparagraph{Completion Criteria:} The user is able to say when is the departure, when the train arrives to the destination and where is the train scale.
+
+\subparagraph{Post-task Interview:}
+
+\begin{enumerate}[label=2.\theenumi .]
+  \item How easy or difficult was it for you to accomplish this task?
+  \item Was it easy to find the form?
+  \item Did you like the way you had to input the trip details?
+  \item Did you clearly understand the results table?
+  \item Which part of the task you found more confusing?
+  \item When you clicked in the details of your trip, did you find it easy to check when you have to switch trains?
+   \item Do you feel that you need to ask some extra information to the ticket officer?
+\end{enumerate}
+
+
+\paragraph{Task 3 - Find a cheap ticket from Braga to Aveiro}
+This task is similar to the previous task 2 but this time, the passenger only has 10 euros to spend in the trip. The steps are the same, but in this case the user cannot select a fast train IC or AP, because they are more expensive.
+
+\subparagraph{Post-task Interview:}
+
+\begin{enumerate}[label=3.\theenumi .]
+  \item How easy or difficult was it for you to accomplish this task?
+  \item Which part of the task you found more confusing?
+  \item When you clicked in the details of your trip, did you find it easy to check when you have to switch trains.
+  \item What is your opinion of how price information is displayed?
+\end{enumerate}
+
+\subparagraph{Completion Criteria:} The user chose a train from Inter-regional or Urban services and he/she is able to say when is the departure, when the train arrives to the destination, and how much is it going to cost.
+
+
+\paragraph{Task 4 - Buy a ticket from Braga to Porto}
+In this task the user will be using the netTicket feature to buy a ticket for the train \emph{intercidades} (IC) from Braga to Porto. This will include the registration in myCP service and the task ends before the payment step in order to simplify the test setup. This task intends to analyse how an unregistered user manages to buy a ticket. This might be a difficult task.
+
+The steps are the following:
+
+\begin{enumerate}[label=\roman*.]
+  \item Go to the CP.pt homepage.
+  \item Find the form netTicket in the right panel.
+  \item Insert in the \emph{from} field, the value \emph{Braga}, and in the field \emph{To} the value \emph{Porto - Campanhã}. Specify the dates for the trip, including return.
+  \item Choose the two trains for the round trip and click ``continue" to proceed to the next step.
+  \item Since the user is not registered yet, the user clicks on the link ``Register"
+  \item The user fills the registration form submits.
+  \item A new form asking for Preferred/Most used Service appears. It is optional, the user can skip it.
+  \item A new form asking if CP can use the email for newsletter. The user can now finish the registration.
+  \item The user has to resubmit the trip information.
+  \item Now the user identifies the passenger with his/her name and ID Card number
+  \item Select one seat different from the default when available. In the end click ``Confirm"
+\end{enumerate}
+
+\subparagraph{Completion Criteria:} The user is on stage 5 ``Payment" of the buying process. In the description of the page, the details of a trip from \textit{Braga} to \textit{Porto - Campanhã} are summarized.
+
+\subparagraph{Post-task Questions:}
+
+\begin{enumerate}[label=4.\theenumi{}.]
+  \item How easy or difficult was it for you to accomplish this task?
+  \item Which part of the task you found more confusing?
+  \item What did you think about the registration process?
+  \item When you had to select the seat for your ticket, the interface was familiar? Did you have any trouble understanding how it works?
+  \item What is your about opinion how the price information is displayed?
+  \item In the whole task was there any steps that you found unnecessary? Which?
+\end{enumerate}
+
+% ---------------~o~--------------- %
+\section{System Usability Scale}
+
+After all the tasks have been completed, the moderator asks the participant to answer the \textit{System Usability Scale} (SUS), trying to record his/her immediate response to each item.
+
+
+\section{Post-test Questionnaire}
+
+In order to have a more detailed impression of the participants, the \textit{Post-Test Questionnaire} is given to the participants.
+%----------------------------------------------------------------------------------------
+
+\end{document}
