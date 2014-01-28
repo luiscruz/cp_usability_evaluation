@@ -11,6 +11,8 @@
 \usepackage[colorinlistoftodos]{todonotes}
 \usepackage{hyperref}
 \usepackage{enumitem}
+\usepackage{pdfpages}
+\usepackage{framed}
 
 \addto{\captionsenglish}{\renewcommand{\abstractname}{Executive Summary}}
 
@@ -107,31 +109,33 @@ The browser Safari 7.0.1 with default settings was used with an internet connect
 
 \subsubsection{Test Administrator Tools}
 
-A \emph{Data Logging Form}\todo{ref appendix} was designed providing the moderator with a tool to record some notes about each task of each participant. The form has some variables \todo{define variables}, and a generic questionnaire to be asked to the user. It also provides a space to take some notes while the moderator conducts a small post-task interview.
+A \emph{Data Logging Form} (see ~\ref{sec:dataLoggingForm}) was designed providing the moderator with a tool to record some notes about each task of each participant. The form has some variables \todo{define variables}, and a generic questionnaire to be asked to the user. It also provides a space to take some notes while the moderator conducts a small post-task interview.
 
-All the task information is provided in the \emph{Usability Test Plan}, available in the appendix~\ref{sec:usabilityTestPlan}. Some script about how the moderator should conduct the experiment is provided. All the steps that are necessary to finish a task are clearly described as well as some guidelines with the important questions for the post-task interview.
+All the task information is provided in the \emph{Usability Test Plan}, available in the appendix~\ref{sec:usabilityTestPlan}, defining a script about how the moderator should conduct the experiment is provided. All the steps that are necessary to finish a task are clearly described as well as some guidelines with the important questions for the post-task interview.
 
-After the test the participants were asked to answer a post-test questionnaire based on~\citep{post test} \todo{appendix}.
+After the test, the participants were asked to answer a post-test questionnaire based on~\citep{} provided in appendix~\ref{sec:postTestQuestionnaire}.
 
 As it was already mentioned, during the experiments, the screen and voice were recorded using the tool QuickTime Player 10.3.
 
 \subsection{Experimental Design}
-vDescribe the logical design of the test. Define independent variables and control variables. Briefly describe the measures for which data were recorded for each set of conditions.
+vDescribe the logical design of the test. Define independent variables and control variables. Briefly describe the measures for which data were recorded for each set of conditions. \todo{vriables}
 
 \subsubsection{Procedure}
 
 The participants were informed that the usability of CP's website was being tested, to find out whether it met the needs of users such as themselves. They were told that it was not a test of their abilities. They were asked to sign a consent form.
 
 Participants were given introductory instructions. The evaluator reset the state of the computer before each task, and provided instructions for the next task. 
+
 The participant could ask for assistance and make questions whenever they find necessary, in order clarify any part of the task. All assistances were logged by the moderator. Also there was no time limit for the task completions, but if the moderator feels that the participant is stuck in some part, he was allowed to give some hints if properly logged.
 
-After each task the moderator conducted a small interview trying to answer some crucial questions.
+After each task the moderator conducted a small interview trying to answer some crucial questions provided in the Usability Test Plan (see appendix~\ref{sec:usabilityTestPlan}).
 
 The participants were non remunerated voluntaries and during each test session only the moderator and a participant were present.
 
 \subsubsection{Participant General Instructions}
 
 The instructions were given personally by the moderator to each participant. The test session proceeds by having only one user in the room with a moderator. Whenever the user needed help he/she could simply ask for help.
+ The participant was asked to use the \textit{think-aloud} technique, describing every step he/she makes during the tasks. The moderator will be directly observing the participant and taking some notes using the Data Logging Form, provided in appendix~
 
 \subsubsection{Participant Task Instructions}
 Before starting each task the moderator explained what it was expected to accomplish in the following task. The task instructions are very simple, being described in a short sentence, as stated in section~\ref{sec:tasks}.
@@ -181,13 +185,52 @@ TABLE
 
 \appendix
 
+\section{Consent and Recording Release Form}
+\todo{reference}
+\begin{oframed}
+  \begin{center}
+    \large \textsc{Consent and Recording Release Form}}
+  \end{center} 
+I agree to participate in the study conducted and recorded by the MAP-i student Luís Cruz. 
 
+I understand and consent to the use and release of the recording by Luís Cruz. I understand that the information and recording is for research purposes only and that my name and image will not be used for any other purpose. I relinquish any rights to the recording and understand the recording may be copied and used by Luís Cruz without further permission. 
+
+I understand that participation in this usability study is voluntary and I agree to immediately raise any concerns or areas of discomfort during the session with the study administrator.
+
+Please sign below to indicate that you have read and you understand the information on this form and that any questions you might have about the session have been answered. 
+
+~
+
+Date: \rule{2cm}{0.4pt} 
+
+Please print your name: \hrulefill
+
+Please sign your name: \hrulefill
+
+
+
+Thank you!
+
+Your participation is kindly appreciated.
+\end{oframed}
+
+\includepdf[pagecommand=\section{Usability Test Plan}\label{sec:usabilityTestPlan}\thispagestyle{plain}{The plain original document can be accessed at \url{http://paginas.fe.up.pt/~luiscruz/cp_usability/}}, nup=2x2, pages=-, frame=true, scale=0.78, offset=0 -25]{../usabilityTestPlan/master.pdf}
+
+% ------- DATA LOGGIN FORM -------- %
+
+\includepdf[pagecommand=\section{Data Logging Form}\label{sec:dataLoggingForm}\thispagestyle{plain}{The moderator of the usability test observes the behavior of the participant while taking notes in the Data Logging Form. Each task needs one Data Logging Form.}, pages=-, frame=true, scale=0.75, offset=0 -25]{../dataLoggingForm/master.pdf}
+
+
+% ---------------~o~--------------- %
+
+\includepdf[pagecommand=\section{Post-Test Questionnaire}\label{sec:postTestQuestionnaire}\thispagestyle{plain}{The moderator of the usability test observes the behavior of the participant while taking notes in the Data Logging Form. Each task needs one Data Logging Form.}, pages=1, frame=true, scale=0.75, offset=0 -25]{../postTestQuestionnaire/master.pdf}
+\includepdf[pagecommand=\thispagestyle{plain}, pages=2-, frame=true, scale=0.75, offset=0 0]{../postTestQuestionnaire/master.pdf}
 %----------------------------------------------------------------------------------------
 %	BIBLIOGRAPHY
 %----------------------------------------------------------------------------------------
 
 \bibliographystyle{apalike}
-\bibliography{bibliography}
+\bibliography{../bibliography}
 
 %----------------------------------------------------------------------------------------
 

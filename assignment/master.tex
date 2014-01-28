@@ -116,11 +116,15 @@ In order to group the findings of this heuristic evaluation, the severity rankin
 \item Usability catastrophe: imperative to fix this before product can be released.
 \end{enumerate}
 
-In this evaluation, two experienced evaluators participated.
+In this evaluation, two experienced evaluators were asked to focus on the interface elements related with the following top-level user stories:
+\begin{itemize}
+  \item As an unregistered user I want to check time tables and prices for travelling from a given train station to another one.
+  \item As an unregistered user I want to buy a ticket for the fast train services \textit{Alfa Pendular} and \textit{Intercidades} (it may include a registration process).
+\end{itemize}
 
 \subsection{Results}
 
-After completing the heuristic evaluation \todo{number of problems} XX problems were found. They were sorted in table~\ref{tab:heuristic_results} according to the severity rating.
+After completing the heuristic evaluation \todo{number of problems} 11 problems were found. They were sorted in table~\ref{tab:heuristic_results} according to the severity rating.
 \begin{table}[h]
 \begin{center}
   \footnotesize
@@ -169,11 +173,6 @@ After completing the heuristic evaluation \todo{number of problems} XX problems 
 The usability test was carefully reported using the Common Industry Format (CIF)~\citep{iusr2006cif}. The 
 
 % - Moderator's Guide and Data Logging - %
-\subsection{Experimental Design}
-
-In order to guide the moderator during the experiment, a script was elaborated providing the moderator with a clear description of the all steps that that are necessary to efficiently accomplish all the tasks.
-
-\todo{independent and dependent variables and usability measures to be used.}
 
 As suggested in~\citep{mitchell2007step} it is beneficial for the moderator to get the participant's opinion during the test session.
 The usability test combined both \emph{observation} and \textit{query}.
@@ -202,40 +201,7 @@ The reports of the usability test comply with the Common Industry Format (CIF) s
 % ---------------~o~--------------- %
 
 \appendix
-\section{Consent and Recording Release Form}
-\todo{reference}
-\begin{framed}
-  \begin{center}
-    \large \textsc{Consent and Recording Release Form}}
-  \end{center} 
-I agree to participate in the study conducted and recorded by the MAP-i student Luís Cruz. 
 
-I understand and consent to the use and release of the recording by Luís Cruz. I understand that the information and recording is for research purposes only and that my name and image will not be used for any other purpose. I relinquish any rights to the recording and understand the recording may be copied and used by Luís Cruz without further permission. 
-
-I understand that participation in this usability study is voluntary and I agree to immediately raise any concerns or areas of discomfort during the session with the study administrator.
-
-Please sign below to indicate that you have read and you understand the information on this form and that any questions you might have about the session have been answered. 
-
-~
-
-Date: \rule{2cm}{0.4pt} 
-
-Please print your name: \hrulefill
-
-Please sign your name: \hrulefill
-
-
-
-Thank you!
-
-Your participation is kindly appreciated.
-\end{framed}
-
-\includepdf[pagecommand=\section{Usability Test Plan}\label{sec:usabilityTestPlan}\thispagestyle{plain}{The plain original document can be accessed at \url{http://paginas.fe.up.pt/~luiscruz/cp_usability/}}, nup=2x2, pages=-, frame=true, scale=0.78, offset=0 -25]{../usabilityTestPlan/master.pdf}
-
-% ------- DATA LOGGIN FORM -------- %
-
-\includepdf[pagecommand=\section{Data Logging Form}\label{sec:dataLoggingForm}\thispagestyle{plain}{The moderator of the usability test observes the behavior of the participant while taking notes in the Data Logging Form. Each task needs one Data Logging Form.}, pages=-, frame=true, scale=0.75, offset=0 -25]{../dataLoggingForm/master.pdf}
 
 \includepdf[pagecommand=\section{Usability Test Report}\label{sec:usabilityTestReport}\thispagestyle{plain}{The original document is available at \url{http://paginas.fe.up.pt/~luiscruz/cp_usability/}}, pages=1, frame=true, scale=0.75, offset=0 -25]{../usabilityTestReport/master.pdf}
 
@@ -249,7 +215,7 @@ Your participation is kindly appreciated.
 %----------------------------------------------------------------------------------------
 
 \bibliographystyle{apalike}
-\bibliography{bibliography}
+\bibliography{../bibliography}
 
 %----------------------------------------------------------------------------------------
 
