@@ -13,6 +13,8 @@
 \usepackage{enumitem}
 \usepackage{xcolor,colortbl}
 \usepackage{array}
+\usepackage{pdfpages}
+\usepackage{framed}
 
 \renewcommand{\arraystretch}{2}
 
@@ -118,20 +120,20 @@ In this evaluation, two experienced evaluators participated.
 
 \subsection{Results}
 
-After completing the heuristic evaluation \todo{number of problems} XX problems were found. They were sorted in the table according to the 
+After completing the heuristic evaluation \todo{number of problems} XX problems were found. They were sorted in table~\ref{tab:heuristic_results} according to the severity rating.
 \begin{table}[h]
 \begin{center}
   \footnotesize
 \begin{tabular}{c | p{8cm} | c | p{4.5cm}}
   \hline
-	\# & Problem & \parbox[c]{1cm}{Severity Rating} & Violated Heuristic  \\
+	\# & Problem & \parbox[c]{1cm}{Severity Rating} & Violated Heuristic(s)  \\
 	\hline
 	
-		1  &  The ``Timetable and Prices" form is very similar with the form for buying tickets. Non expert users might not notice the difference.    & \cellcolor{red!25} 3 & Error prevention  \\
+		1  &  The ``Timetable and Prices" form is very similar with the form for buying tickets. Non expert users might not notice the difference.    & \cellcolor{red!25} 3 & Error prevention.  \\
 		
 		2 &  There is an auto complete feature in the "Timetable and Prices" and NetTicket forms, which whenever the user misspells a letter of the station name, the system may complete with another station's name, and the user has to hit the backspace button one more time than usual. & \cellcolor{red!25} 3 & Error prevention; Help users recognize, diagnose, and recover from errors.\\
 	
-  3   & The seat selection is made in a uncommon way. One has to first click on the previous seat and then on the desired seat.  & \cellcolor{red!25} 3 &  Consistency and standards  \\
+  3   & The seat selection is made in a uncommon way. One has to first click on the previous seat and then on the desired seat.  & \cellcolor{red!25} 3 &  Consistency and standards.  \\
   
 		4  & The services of trains are defined as acronyms which are not used by the users (eg., IC means Intercidades)  &\cellcolor{orange!20} 2  &  Consistency and standards; Match between system and the real world.  \\
 	
@@ -143,52 +145,28 @@ After completing the heuristic evaluation \todo{number of problems} XX problems 
 
 7 &  When searching for a travelling ticket to buy, the user selects whether is travelling in first or second class in the beginning of the search. It is defined as second class by default and might not be perceptible. Through the next steps the user cannot change it. & \cellcolor{orange!20} 2 & User control and freedom.\\
 
-8 & In the buying process there is no back button, besides the one provided by the browser that is not recommended by the system since he presents an alert warning that the user is about to leave the page. & \cellcolor{orange!20}2 & User control and freedom\\
+8 & In the buying process there is no back button, besides the one provided by the browser that is not recommended by the system since he presents an alert warning that the user is about to leave the page. & \cellcolor{orange!20}2 & User control and freedom.\\
 
-9  &  In the timetable results, there is a clickable down arrow that does not do anything  & \cellcolor{yellow!10} 1 &  Aesthetic and minimalist design, Consistency and standards  \\
+9  &  In the timetable results, there is a clickable down arrow that does not do anything  & \cellcolor{yellow!10} 1 &  Aesthetic and minimalist design; Consistency and standards.  \\
 
-	10  &  There is a Time input field when in the form "Timetables and Prices", which might be unnecessary and provides no useful filtering in the results.  & \cellcolor{yellow!10} 1 &  Aesthetic and minimalist design  \\
+	10  &  There is a Time input field when in the form "Timetables and Prices", which might be unnecessary and provides no useful filtering in the results.  & \cellcolor{yellow!10} 1 &  Aesthetic and minimalist design.  \\
 	
-		11 &  In the timetable results there is a number identifying the row that does not provide any useful information & \cellcolor{yellow!10} 1 & Aesthetic and minimalist design\\
+		11 &  In the timetable results there is a number identifying the row that does not provide any useful information & \cellcolor{yellow!10} 1 & Aesthetic and minimalist design.\\
 	
 \hline
 \end{tabular}
 \end{center}
-\caption{default}
-\label{heuristic evaluation details}
+\caption{Problems found in the Heuristic Evaluation.}
+\label{tab:heuristic_results}
 \end{table}
 
-\paragraph{Evaluator 1} Sth
-
-\paragraph{Evaluator 2} Sth la la la la llaa
 
 %----------------------------------------------------------------------------------------
 %	USABILITY TEST
 %----------------------------------------------------------------------------------------
 \section{Usability Test}
 
-% ---------- PARTICIPANTS --------- %
-\subsection{Participants}
-A careful selection of participants --- it is important to have participants with the same experience level, demographics, and areas of interest, and that will eventually be the end users of the product --- the Screener method is very useful in this phase~\citep{mitchell2007step};
-% ---------------~o~--------------- %
-
-
-% ------------- TASKS ------------- %
-\section{Tasks}
-
-
-The tasks that the participant has to accomplish are the following:
-
-\begin{enumerate}
-  \item Select the English Version of the application.
-  \item Find the schedule for a trip from Braga to Aveiro.
-  \item Find a cheap trip from Braga to Aveiro.
-  \item Buy a ticket from Braga to Porto.
-\end{enumerate}
-
-These tasks are described in more detail in the \emph{Usability Test Plan}, available in the appendix~\ref{sec:usabilityTestPlan}.
-% ---------------~o~--------------- %
-
+The usability test was carefully reported using the Common Industry Format (CIF)~\citep{iusr2006cif}. The 
 
 % - Moderator's Guide and Data Logging - %
 \subsection{Experimental Design}
@@ -226,7 +204,10 @@ The reports of the usability test comply with the Common Industry Format (CIF) s
 \appendix
 \section{Consent and Recording Release Form}
 \todo{reference}
-
+\begin{framed}
+  \begin{center}
+    \large \textsc{Consent and Recording Release Form}}
+  \end{center} 
 I agree to participate in the study conducted and recorded by the MAP-i student Luís Cruz. 
 
 I understand and consent to the use and release of the recording by Luís Cruz. I understand that the information and recording is for research purposes only and that my name and image will not be used for any other purpose. I relinquish any rights to the recording and understand the recording may be copied and used by Luís Cruz without further permission. 
@@ -235,6 +216,8 @@ I understand that participation in this usability study is voluntary and I agree
 
 Please sign below to indicate that you have read and you understand the information on this form and that any questions you might have about the session have been answered. 
 
+~
+
 Date: \rule{2cm}{0.4pt} 
 
 Please print your name: \hrulefill
@@ -242,124 +225,21 @@ Please print your name: \hrulefill
 Please sign your name: \hrulefill
 
 
+
 Thank you!
 
 Your participation is kindly appreciated.
+\end{framed}
 
-
-\section{Usability Test Plan}
-\label{sec:usabilityTestPlan}
-This document is a script for the moderator describing the sequence of activities and questions that each participant will experience.
-
-\subsection{Introductory Talk}
-
-The moderator introduces himself and explains to the participant what is his role and how the experiment will evolve.
-
-It is important to make the participant feel comfortable to give his honest opinion and do not worry to say something that could hurt the developer's feelings. We want to listen to every comment the user might have about the website, and the ``Thinking Aloud" technique should be explained to him for better results.
-
-It is recommended before starting to ask if the user has any doubts about the consent form he just signed as well as about the experiment.
- 
-\subsection{Tasks}
-
-The computer is set with an open browser to: \url{http://www.cp.pt/}
-
-In this section the tasks are detailed with all the necessary steps in order to help the moderator to help the user. However, unless the user needs some help he/she is not supposed to read it.
-
-After each task, the moderator reports if the user accomplished the task with the following taxonomy: \emph{Yes} / \emph{No} / \emph{Yes with help}.
-
-\paragraph{Task 1 - Select the English Version} In this task the user has to change the language of the application to English:
-
-\begin{enumerate}[label=\roman*.]
-  \item Go to the CP.pt homepage (url: \url{http://www.cp.pt/}) 
-  \item Select the british flag on the top bar.
-\end{enumerate}
-\subparagraph{Completion Criteria:} The website has to be in the English language.
-
-\subparagraph{Post-task Interview:}
-
-\begin{enumerate}[label=1.\theenumi .]
-  \item Is this the first time you visit this website?
-  \item Please give me your first impressions about the layout and design of the website.
-  \item How easy or difficult was it for you to accomplish this task?
-  \item Was there something specific that made this task easy or difficult?
-\end{enumerate}
-
-\paragraph{Task 2 - Going from Braga to Aveiro} In this task the user is asked to find when is the next train from Braga to Aveiro, how much is the ticket and where is it necessary to switch lines. In order to accomplish this task, the user has to:
-
-\begin{enumerate}[label=\roman*.]
-  \item Go to the CP.pt homepage
-  \item Find the form through the tab ``Timetables and Prices" of the right panel.
-  \item Introduce the details of the trip, from Braga to Aveiro in the present day. Optionally, the time can be set, and it is not necessary to specify the return trip.
-  \item Select one of the listed trips, by selecting ``see" and/or ``detail" links. 
-  \item Report the time of departure, the price of the ticket, the duration and how long will the passenger have to wait in the station, and when is the departure of the second train.
-\end{enumerate}
-
-\subparagraph{Completion Criteria:} The user is able to say when is the departure, when the train arrives to the destination and where is the train scale.
-
-\subparagraph{Post-task Interview:}
-
-\begin{enumerate}[label=2.\theenumi .]
-  \item How easy or difficult was it for you to accomplish this task?
-  \item Was it easy to find the form?
-  \item Did you like the way you had to input the trip details?
-  \item Did you clearly understand the results table?
-  \item Which part of the task you found more confusing?
-  \item When you clicked in the details of your trip, did you find it easy to check when you have to switch trains?
-   \item Do you feel that you need to ask some extra information to the ticket officer?
-\end{enumerate}
-
-
-\paragraph{Task 3 - Find a cheap ticket from Braga to Aveiro}
-This task is similar to the previous task 2 but this time, the passenger only has 10 euros to spend in the trip. The steps are the same, but in this case the user cannot select a fast train IC or AP, because they are more expensive.
-
-\subparagraph{Post-task Interview:}
-
-\begin{enumerate}[label=3.\theenumi .]
-  \item How easy or difficult was it for you to accomplish this task?
-  \item Which part of the task you found more confusing?
-  \item When you clicked in the details of your trip, did you find it easy to check when you have to switch trains.
-  \item What is your opinion of how price information is displayed?
-\end{enumerate}
-
-\subparagraph{Completion Criteria:} The user chose a train from Inter-regional or Urban services and he/she is able to say when is the departure, when the train arrives to the destination, and how much is it going to cost.
-
-
-\paragraph{Task 4 - Buy a ticket from Braga to Porto}
-In this task the user will be using the netTicket feature to buy a ticket for the train \emph{intercidades} (IC) from Braga to Porto. This will include the registration in myCP service and the task ends before the payment step in order to simplify the test setup. This task intends to analyse how an unregistered user manages to buy a ticket. This might be a difficult task.
-
-The steps are the following:
-
-\begin{enumerate}[label=\roman*.]
-  \item Go to the CP.pt homepage.
-  \item Find the form netTicket in the right panel.
-  \item Insert in the \emph{from} field, the value \emph{Braga}, and in the field \emph{To} the value \emph{Porto - Campanhã}. Specify the dates for the trip, including return.
-  \item Choose the two trains for the round trip and click ``continue" to proceed to the next step.
-  \item Since the user is not registered yet, the user clicks on the link ``Register"
-  \item The user fills the registration form submits.
-  \item A new form asking for Preferred/Most used Service appears. It is optional, the user can skip it.
-  \item A new form asking if CP can use the email for newsletter. The user can now finish the registration.
-  \item The user has to resubmit the trip information.
-  \item Now the user identifies the passenger with his/her name and ID Card number
-  \item Select one seat different from the default when available. In the end click ``Confirm"
-\end{enumerate}
-
-\subparagraph{Completion Criteria:} The user is on stage 5 ``Payment" of the buying process. In the description of the page, the details of a trip from \textit{Braga} to \textit{Porto - Campanhã} are summarized.
-
-\subparagraph{Post-task Questions:}
-
-\begin{enumerate}[label=4.\theenumi{}.]
-  \item How easy or difficult was it for you to accomplish this task?
-  \item Which part of the task you found more confusing?
-  \item What did you think about the registration process?
-  \item When you had to select the seat for your ticket, the interface was familiar? Did you have any trouble understanding how it works?
-  \item What is your about opinion how the price information is displayed?
-  \item In the whole task was there any steps that you found unnecessary? Which?
-\end{enumerate}
+\includepdf[pagecommand=\section{Usability Test Plan}\label{sec:usabilityTestPlan}\thispagestyle{plain}{The plain original document can be accessed at \url{http://paginas.fe.up.pt/~luiscruz/cp_usability/}}, nup=2x2, pages=-, frame=true, scale=0.78, offset=0 -25]{../usabilityTestPlan/master.pdf}
 
 % ------- DATA LOGGIN FORM -------- %
-\section{Data Logging Form}
 
-The moderator of the usability test observes the behavior of the participant while taking notes in the Data Logging Form. Each task has one Data Logging Form.
+\includepdf[pagecommand=\section{Data Logging Form}\label{sec:dataLoggingForm}\thispagestyle{plain}{The moderator of the usability test observes the behavior of the participant while taking notes in the Data Logging Form. Each task needs one Data Logging Form.}, pages=-, frame=true, scale=0.75, offset=0 -25]{../dataLoggingForm/master.pdf}
+
+\includepdf[pagecommand=\section{Usability Test Report}\label{sec:usabilityTestReport}\thispagestyle{plain}{The original document is available at \url{http://paginas.fe.up.pt/~luiscruz/cp_usability/}}, pages=1, frame=true, scale=0.75, offset=0 -25]{../usabilityTestReport/master.pdf}
+
+\includepdf[pagecommand=\thispagestyle{plain}, pages=2-, nup=2x2, frame=true, scale=0.8]{../usabilityTestReport/master.pdf}
 
 % ---------------~o~--------------- %
 
