@@ -11,6 +11,10 @@
 \usepackage[colorinlistoftodos]{todonotes}
 \usepackage{hyperref}
 \usepackage{enumitem}
+\usepackage{xcolor,colortbl}
+\usepackage{array}
+
+\renewcommand{\arraystretch}{2}
 
 \title{User Interface Evaluation of the CP's Website\\ (Proposal)}
 \author[1]{Luís  Cruz}
@@ -100,9 +104,59 @@ This method proceeds by having a small set of evaluators judging the system acco
 
 Heuristic evaluation was originally developed for evaluators who had some knowledge in usability but who were not necessarily usability experts~\citep{nielsen1990heuristic}, however, it has been showed that the method is also very effective for expert evaluators~\citep{nielsen1992finding}.
 
+In order to group the findings of this heuristic evaluation, the severity ranking proposed by \citet{nielsen1995rating} with a scale from 0 to 4:
+
+\begin{enumerate}[start=0, label={\theenumi{} -}]
+\item I don't agree that this is a usability problem at all;
+\item Cosmetic problem only: need not be fixed unless extra time is available on project;
+\item Minor usability problem: fixing this should be given low priority;
+\item Major usability problem: important to fix, so should be given high priority;
+\item Usability catastrophe: imperative to fix this before product can be released.
+\end{enumerate}
+
 In this evaluation, two experienced evaluators participated.
 
 \subsection{Results}
+
+After completing the heuristic evaluation \todo{number of problems} XX problems were found. They were sorted in the table according to the 
+\begin{table}[h]
+\begin{center}
+  \footnotesize
+\begin{tabular}{c | p{8cm} | c | p{4.5cm}}
+  \hline
+	\# & Problem & \parbox[c]{1cm}{Severity Rating} & Violated Heuristic  \\
+	\hline
+	
+		1  &  The ``Timetable and Prices" form is very similar with the form for buying tickets. Non expert users might not notice the difference.    & \cellcolor{red!25} 3 & Error prevention  \\
+		
+		2 &  There is an auto complete feature in the "Timetable and Prices" and NetTicket forms, which whenever the user misspells a letter of the station name, the system may complete with another station's name, and the user has to hit the backspace button one more time than usual. & \cellcolor{red!25} 3 & Error prevention; Help users recognize, diagnose, and recover from errors.\\
+	
+  3   & The seat selection is made in a uncommon way. One has to first click on the previous seat and then on the desired seat.  & \cellcolor{red!25} 3 &  Consistency and standards  \\
+  
+		4  & The services of trains are defined as acronyms which are not used by the users (eg., IC means Intercidades)  &\cellcolor{orange!20} 2  &  Consistency and standards; Match between system and the real world.  \\
+	
+
+	5  &  When an unregistered user wants to buy a ticket after choosing a specific train, the system asks him/her to register but after finishing the registration, he/she has to search again for the same train.    & \cellcolor{orange!20} 2 &  Recognition rather than recall. \\
+
+6 &  In order to check the price in the timetable it is necessary to click in a link which when clicked replaces itself into the respective price, but only for one train at a time. & \cellcolor{orange!20} 2 & Flexibility and efficiency of use.\\
+
+
+7 &  When searching for a travelling ticket to buy, the user selects whether is travelling in first or second class in the beginning of the search. It is defined as second class by default and might not be perceptible. Through the next steps the user cannot change it. & \cellcolor{orange!20} 2 & User control and freedom.\\
+
+8 & In the buying process there is no back button, besides the one provided by the browser that is not recommended by the system since he presents an alert warning that the user is about to leave the page. & \cellcolor{orange!20}2 & User control and freedom\\
+
+9  &  In the timetable results, there is a clickable down arrow that does not do anything  & \cellcolor{yellow!10} 1 &  Aesthetic and minimalist design, Consistency and standards  \\
+
+	10  &  There is a Time input field when in the form "Timetables and Prices", which might be unnecessary and provides no useful filtering in the results.  & \cellcolor{yellow!10} 1 &  Aesthetic and minimalist design  \\
+	
+		11 &  In the timetable results there is a number identifying the row that does not provide any useful information & \cellcolor{yellow!10} 1 & Aesthetic and minimalist design\\
+	
+\hline
+\end{tabular}
+\end{center}
+\caption{default}
+\label{heuristic evaluation details}
+\end{table}
 
 \paragraph{Evaluator 1} Sth
 
