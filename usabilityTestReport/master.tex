@@ -13,6 +13,9 @@
 \usepackage{enumitem}
 \usepackage{pdfpages}
 \usepackage{framed}
+\usepackage{float}
+\usepackage[tableposition=top]{caption}
+
 
 \addto{\captionsenglish}{\renewcommand{\abstractname}{Executive Summary}}
 
@@ -150,6 +153,7 @@ For measuring effectiveness the following measures were considered:
 
     \item[Completion Rate] the percentage of participants that correctly finished each task.
  \item[Unassisted Completion Rate] the percentage of participants that correctly finished each task without assistance.
+ \item[Number of steps made differently] number of steps that the participants made differently to the ones described in the test plan.
  \item[Number of Assistances] The average of assurances given in each task.
  \item[Back Button hits] The average of times the user hit the Back Button in the browser.
  \item[Errors] The number of times a user had to repeat parts of the task.
@@ -173,15 +177,173 @@ For measuring effectiveness the following measures were considered:
  \subsection{Data Analysis}
  \subsubsection{Data Scoring}
  The method by which the data collected were scored should be described in sufficient detail to allow replication of the data scoring methods by another organization if the test is repeated. Particular items that should be addressed include the exclusion of outliers, categorization of error data, and criteria for scoring assisted or unassisted completion.
-  \subsubsection{Data Reduction}
+ 
+ Falar do SUS:
+ The score on SUS questionnaire was analyzed using the SUS scoring procedure provided in~\citep{brooke1996sus}.
+ 
+\subsubsection{Data Reduction}
+
+  The combined results of all tasks show the mean reults for the effectiveness an efficiency metrics.
+  
   The method by which the data were reduced should be described in sufficient detail to allow replication of the data reduction methods by another organization if the test is repeated. Particular items that should be addressed include how data were collapsed across tasks or task categories.
-   \subsubsection{Statistical Analysis}
+  
+  In addition to data for each task, the combined results show the total task time and the mean results for effectiveness and efficiency metrics.
+  
+\subsubsection{Statistical Analysis}
    
-   \subsection{Presentation of the Results}
+\subsection{Presentation of the Results}
    Effectiveness, Efficiency and Satisfaction results must always be reported
 
 \subsubsection{Performance Results}
-TABLE
+ 
+ \paragraph{Task 1} The results observed in task 1 are reported in table~\ref{table:results_task_1}.
+ 
+ \begin{table}[H]
+\begin{center}
+  \caption{Results observed in \textbf{task 1}.}
+\begin{tabular}{ c | c | c | c | c | c }
+
+\hline
+Participant ID       & Completion  & \parbox{5em}{\centering Number of Assistances} & \parbox{9em}{\centering Number of steps made differently } & \parbox{6em}{\centering Back Button hits}  &  Errors\\
+\hline
+1                    &  1                  &  0                    &  0                &  0        &  0\\   
+2                    &  1                  &  0                    &  0                &  0        & 0\\   
+Mean                 &  1                  &  0                    &  0                &  0        & 0\\   
+Standard Error       &  0                  &&&\\   
+Standard Deviation   &  0                  &&&\\   
+Min                  &  1                  &  0                    &  0                &  0        & 0\\   
+Max                  &  1                  &  0                    &  0                &  0        & 0\\   
+\hline
+
+\end{tabular}
+\end{center}
+\label{table:results_task_1}
+\end{table}
+% -------------------------- %
+ 
+\paragraph{Task 2} The results observed in task 2 are reported in table~\ref{table:results_task_2}.
+
+ \begin{table}[H]
+\begin{center}
+\caption{Results observed in \textbf{task 2}.}
+\begin{tabular}{ c | c | c | c | c | c }
+
+ \hline
+Participant ID       & Completeness  & \parbox{5em}{\centering Number of Assistances} & \parbox{9em}{\centering Number of steps made differently } & \parbox{6em}{\centering Back Button hits}  &  Errors\\
+\hline
+1                    &  1                  &  1                    &  1                &  2        &  3\\   
+2                    &  1                  &  0                    &  2                &  1        & 0\\   
+Mean                 &  1                  &  0.5                  &  1.5              &  1.5       & 1.5\\   
+Standard Error       &  0                  &                       &&\\   
+Standard Deviation   &  0                  &                       &&\\   
+Min                  &  1                  &  0                    &  1                &  1        & 0\\   
+Max                  &  1                  &  1                    &  2                &  2        & 3\\   
+\hline
+
+\end{tabular}
+\end{center}
+\label{table:results_task_2}
+\end{table}
+% -------------------------- %
+\paragraph{Task 3} The results observed in task 3 are reported in table~\ref{table:results_task_3}.
+
+ \begin{table}[H]
+\caption{Results observed in \textbf{task 3}.}
+\begin{center}
+\begin{tabular}{ c | c | c | c | c | c }
+
+ \hline
+Participant ID       & Completeness  & \parbox{5em}{\centering Number of Assistances} & \parbox{9em}{\centering Number of steps made differently } & \parbox{6em}{\centering Back Button hits}  &  Errors\\
+\hline
+1                    &  1                  &  0                    &  0                &  0        & 0 \\   
+2                    &  1                  &  0                    &  0                &  0        & 0 \\   
+Mean                 &  1                  &  0                    &  0                &  0        & 0 \\   
+Standard Error       &  0                  &  0                    &  0                &  0        & 0 \\   
+Standard Deviation   &  0                  &  0                    &  0                &  0        & 0 \\   
+Min                  &  1                  &  0                    &  1                &  1        & 0\\   
+Max                  &  1                  &  0                    &  2                &  2        & 0\\   
+\hline
+
+\end{tabular}
+\end{center}
+\label{table:results_task_3}
+\end{table}
+% -------------------------- %
+
+\paragraph{Task 4}The results observed in task 4 are reported in table~\ref{table:results_task_4}.
+
+ \begin{table}[H]
+   \label{table:results_task_4}
+\begin{center}
+\caption{Results observed in \textbf{task 4}.}
+\begin{tabular}{ c | c | c | c | c | c }
+
+ \hline
+Participant ID       & Completeness  & \parbox{5em}{\centering Number of Assistances} & \parbox{9em}{\centering Number of steps made differently } & \parbox{6em}{\centering Back Button hits}  &  Errors\\
+\hline
+1                    &  1                  &  3                    &  0                &  0        & 0 \\   
+2                    &  1                  &  0                    &  1                &  2        & 0 \\   
+Mean                 &  1                  &  1.5                  &  0.5              &  1        & 0 \\   
+Standard Error       &  0                  &                       &                   &           & 0 \\   
+Standard Deviation   &  0                  &                       &                   &           & 0 \\   
+Min                  &  1                  &  0                    &  0                &  0        & 0\\   
+Max                  &  1                  &  3                    &  1                &  2        & 0\\   
+\hline
+
+\end{tabular}
+\end{center}
+\end{table}
+% -------------------------- %
+
+% ------------------------------------------------ %
+%                  COMBINED RESULTS                %
+% ------------------------------------------------ %
+ \begin{table}[H]
+\begin{center}
+  \footnotesize
+\caption{Combined Performance Results.}
+\begin{tabular}{ c | c | c | c | c | c | c }
+
+ \hline
+Participant ID       & \parbox{5em}{\centering Completion Rate\\(\%)} & \parbox{8em}{Unassisted Completion Rate\\(\%)}  & \parbox{5em}{\centering Number of Assistances} & \parbox{9em}{\centering Number of steps made differently } & \parbox{6em}{\centering Back Button hits}  &  Errors\\
+\hline
+1                    &  100       &           &  4                    &  1                &  2        & 3 \\   
+2                    &  100       &           &  0                    &  3                &  3        & 0 \\  
+\hline 
+Mean                 &  100       &           &  2                  &  2              &  2.5        & 1.5 \\   
+Standard Error       &  0         &         &                       &                   &           &  \\   
+Standard Deviation   &  0         &         &                       &                   &           &  \\   
+Min                  &  100       &           &  0                    &  1                &  2        & 0\\   
+Max                  &  100       &           &  4                    &  3                &  3        & 3\\   
+\hline
+
+\end{tabular}
+\end{center}
+\end{table}
+% -------------------------- %
+
+
+ \subsubsection{Satisfaction Results}
+
+\begin{table}[h!]
+\begin{center}
+\begin{tabular}{c|r}
+  
+\hline
+Participant ID & Score\footnote{Sth} \\
+\hline
+1  &  25  \\
+2  &  x  \\
+Mean    &  y  \\
+Min     &  z  \\
+Max     &  w  \\
+\hline
+\end{tabular}
+\end{center}
+\caption{default}
+\label{default}
+\end{table}
+
 
 \appendix
 
