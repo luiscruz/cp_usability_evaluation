@@ -21,6 +21,7 @@ One analytical method and one empirical method are going to be applied in this e
   
 Through the Heuristic evaluation it was possible to find X issues in the user interface.
 As a result of the usability test a report complying with the CIF standards, an usability test plan, and a usability post-test questionnaire were produced. The usability test assessed the efficiency, efficacy and satisfaction measures of the system.
+\todo{talk about }
 
 \end{abstract}
 
@@ -166,20 +167,29 @@ After completing the heuristic evaluation \todo{number of problems} 11 problems 
 
 The usability test was carefully reported using the Common Industry Format (CIF)~\citep{iusr2006cif} in a document entitled \emph{Usability Test Report} which is provided in the appendix~\ref{sec:usabilityTestReport}. This section briefly describes the usability test, but for further details please refer to the usability test report.
 
-Furthermore, in the scope of this test, an \emph{Usability Test Plan}, and a \emph{Post-Test Questionnaire} were designed, being all available in the appendix of the usability test report (see~\ref{sec:usabilityTestReport}). Additionally, all material and data can be downloaded in this assignment project's website\footnote{This assignment is published in a website available at~\url{http://paginas.fe.up.pt/~luiscruz/cp_usability/}}.
+Furthermore, in the scope of this test, an \emph{Usability Test Plan}, and a \emph{Post-Test Questionnaire} were designed, being all available in the appendix of the usability test report (see appendix~\ref{sec:usabilityTestReport}). Additionally, all material and data can be downloaded in this assignment project's website\footnote{This assignment is published in a website available at~\url{http://paginas.fe.up.pt/~luiscruz/cp_usability/}}.
 
 \paragraph{Participants} Two individuals were invited to participate. They were college students complying ages between 21 and 26 years, and they usually have to travel in order to get to their universities. All participants had a moderate level of experience using WEB applications.
 
-\paragraph{Methodology} As suggested in~\citep{mitchell2007step} it is beneficial to get the participant's opinion during the test session.
+\begin{samepage}
+\paragraph{Methodology} The users were invited to perform some tasks regarding some of the most used features in the website:
+
+\begin{enumerate}
+  \item Select the English Version of the application.
+  \item Find the schedule for a trip from Braga to Aveiro.
+  \item Find a cheap trip from Braga to Aveiro.
+  \item Buy a ticket from Braga to Porto.
+\end{enumerate}
+\end{samepage}
+
+As suggested in~\citep{mitchell2007step} it is beneficial to get the participant's opinion during the test session.
 The usability test combined both \emph{observation} and \textit{query}.
 
-The participant was asked to use the think aloud behavior (TA), describing every step he/she makes during the tasks.
-The moderator was directly observing the participant while taking some notes using the \emph{Data Logging Form}, and after the completion of each task, users were interviewed in an informal way, trying to answer some questions clearly stated in the \emph{Usability Test Plan} document.
+The participants were asked to use the think aloud behavior (TA), describing every step they made during the tasks.
+The moderator was directly observing the participant while taking some notes using the \emph{Data Logging Form}, and after the completion of each task, users were interviewed in a casual way, trying to answer some questions clearly stated in the \emph{Usability Test Plan} document.
 In addition, the screen and audio were also recorded for indirect observation.
-
- After the completion of each task, users were interviewed in an informal way, trying to answer some questions clearly stated in the \emph{Usability Test Plan} document. Moreover, after the whole test, participants gave some feedback through the \emph{Post-Test Questionnaire}.
  
- All this setup intended to evaluate the system in terms of \emph{efficiency}, \emph{efficacy}, and \emph{user satisfaction}:
+All this setup intended to evaluate the system in terms of \emph{effectiveness}, \emph{efficiency}, and \emph{user satisfaction}:
  
  \begin{itemize}
    \item Effectiveness
@@ -202,9 +212,48 @@ In addition, the screen and audio were also recorded for indirect observation.
    \end{itemize}
  \end{itemize}
  \todo{fill variables}
+ 
+ After the completion of each task, users were interviewed in an informal way, trying to answer some questions clearly stated in the \emph{Usability Test Plan} document. Moreover, after the whole test, participants gave some feedback through the \emph{Post-Test Questionnaire}.
+ 
+ 
  \paragraph{Main Results}
+All users were able to successfully complete the given tasks, and the assisted completion rate was 75\%.
 
-\todo{ main results}
+The first task, selecting the english version, was very simple and users took just 8 seconds to complete. This task proved that the feature is well implemented, and was important to make the participant comfortable with the test environment. The task 4, buying a ticket, was more complex and took longer for the users to complete, with an average of 6 minutes and 27 seconds. The efficiency was also measured through the completion rate efficiency, resulting in a mean of $38\%/min$.
+
+The time results suggest an interesting fact in the times for task 2 and task 3. The complexity of these tasks is very similar and the steps to complete are identical. However, task 2 took in average 2 minutes and 38 seconds, while task 3 reduced this time to 1 minute and 9 seconds. This can be an indicator that the system might be well suited for second time visitors.
+
+Some times the user was confused and made wrong steps, but easily recognized and hit the back button. This inefficiency was reported with an average of 2.5 hits per user during the whole test.
+
+The SUS questionnaire scored 60 points. In~\citep{sauro2011measuring}, the average SUS for 500 systems is 68, which means that this website has a satisfaction level considered below average. According to a SUS qualitative classification proposed in~\citep{bangor2009determining}, the overall satisfaction perceived from users is \textbf{good}.
+
+\paragraph{Observed issues and users's feedback}
+One very important contribution of the interviews and the post-test questionnaire was to get the most from the user's opinion. This procedure successfully provided some spots in the features that need improvement. 
+
+Users are satisfied with the graphical appearance of the website. However, they stated that is too much information in the view.
+
+An important issue was the fact of the ``Timetable and Prices'' form is not visible but is very similar to the \emph{netTicket} form which is visible. Users frequently made the mistake of using the wrong form. Another component users didn't like was the table results. They felt the need of a more readable table that provided some filtering, at least for price range and line service.
+
+Another difficulty faced by first time users, was the feature of selecting a seat for the ticket. The user interaction was intuitive and users had negative remarks about that.
+
+\paragraph{Pilot Test}
+
+Although some statistical analysis was performed, the sample of users is not representative due to its small size (two individuals). This means that, although some important considerations were taken and which might help to improve the usability of the website, the measures reported cannot be considered as valid. 
+The state of this study can be seen as the starting point for a rigorous usability test with more participants.  \todo{usability test size of sample}
+
+However, this experiment allowed to make a pilot test: some aspects of the test were iteratively improved, and some other might need some changes in future work.
+
+Some of the changes made were regarding the interview for each task. The interview guidelines tried to answer the same generic questions in different tasks, which did not provide any extra information. This was improved from the first to the second participant.
+Another small fix that had to be made was to increase the size of the fields in the post-test questionnaire, since they were too small.
+
+In the first attempts for the screen and audio recording, each task was being recorded separately. This was leading to an interruption of the flow of the test, because the moderator had to start and stop the recording each time. Thus, it was decided to record the session in a single take.
+
+One of the main difficulties was the think aloud technique. It is hard to make a participant feel really comfortable to explain every single step. Also, it depends on the profile of the participant, some participants might be more quiet than others. Another aspect to improve is the fact of users sometimes want to prove they have good skills, and do not want to make mistakes, which makes harder to reproduce the usual behavior of the user.
+
+Regarding the Data Logging Form, some measures did not provide useful measures and could be removed in future experiments in order to simplify the observation process. This is the case of \emph{time start}, \emph{time end}, and \emph{number of negative remarks}. Regarding \emph{negative remarks}, it is important to write down this feedback in the notes field, but the number of remarks was not very useful in this case.
+
+Another change that could be made is related with the interviews made after each task. They are very useful, but some of the questions made were not
+
 % ---------------~o~--------------- %
 
 
@@ -212,7 +261,15 @@ In addition, the screen and audio were also recorded for indirect observation.
 % ------------ RESULTS ------------ %
 \section{Conclusions and Future Work}
 
-loee, oipnx hjk.
+This document reported the usability evaluation of CP.pt website. The \emph{Heuristic Evaluation} was very effective, it allowed to find 11\todo{FIXME} usability problems, from which 3 were considered to be high priority fixes. Besides, it was very cheap and easy to prepare. Before proceeding to the usability test, this issued should have been fixed.
+
+The usability test provided was carefully prepared and two college students participated in the experiment.
+An usability test plan with some guidelines, a post-test questionnaire, a SUS questionnaire, and a data logging form were developed to get a very detailed information about the usability.
+The results suggest that website is very effective, since all users were able to correctly complete all the tasks, with an assisted completeness rate was of 75\%. 
+
+\todo{talk about satisfaction, interview and questionnaire}
+
+Although the size of the sample was to small, the experiments with these 2 participants served as a pilot test, allowing to improve the test procedure and tools. As future work, the designed usability test should be conducted with a more representative sample. For better results, the problems spotted with the Heuristic Evaluation should be fixed before proceeding with the usability test.
 % ---------------~o~--------------- %
 
 \appendix
