@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CP's Website Usability Evaluation</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="page-header">
+      <h1>SUS Score Calculator <small><a target='_blank' href='http://www.measuringusability.com/sus.php'>More info</a></small></h1>
+    </div>
+    <style>
+    </style>
+    <div class="containter center-block" style="max-width:400px">
+    <div id="alerts"></div>
+    <form id='sus_form' class="form-horizontal text-center center-block input-sm small" role="form">
+      <div class="form-group input-sm">
+        <label class="control-label col-xs-5" for="question1">1</label>
+        <div class="col-xs-3">
+          <input type="number" class="form-control" id="question1"   min="1" max="5" placeholder="">
+        </div>
+      </div>
+      <div class="form-group input-sm">
+        <label class="control-label col-xs-5" for="question2">2</label>
+        <div class="col-xs-3">
+        <input type="number" class="form-control" id="question2"  min="1" max="5" placeholder="">
+        </div>
+      </div>
+      <div class="form-group input-sm">
+        <label class="control-label col-xs-5" for="question3">3</label>
+        <div class="col-xs-3">
+        <input type="number" class="form-control" id="question3"  min="1" max="5" placeholder="">
+        </div>
+      </div>
+      <div class="form-group input-sm">
+        <label class="control-label col-xs-5" for="question4">4</label>
+        <div class="col-xs-3">
+        <input type="number" class="form-control" id="question4"  min="1" max="5" placeholder="">
+        </div>
+      </div>
+      <div class="form-group input-sm">
+        <label class="control-label col-xs-5" for="question5">5</label>
+        <div class="col-xs-3">
+        <input type="number" class="form-control" id="question5"  min="1" max="5" placeholder="">
+        </div>
+      </div>
+
+      <div class="form-group input-sm">
+        <label class="control-label col-xs-5" for="question6">6</label>
+        <div class="col-xs-3">
+        <input type="number" class="form-control" id="question6"  min="1" max="5" placeholder="">
+        </div>
+      </div>
+
+      <div class="form-group input-sm">
+        <label class="control-label col-xs-5" for="question7">7</label>
+        <div class="col-xs-3">
+        <input type="number" class="form-control" id="question7"  min="1" max="5" placeholder="">
+        </div>
+      </div>
+
+      <div class="form-group input-sm">
+        <label class="control-label col-xs-5" for="question8">8</label>
+        <div class="col-xs-3">
+        <input type="number" class="form-control" id="question8"  min="1" max="5" placeholder="">
+        </div>
+      </div>
+
+      <div class="form-group input-sm">
+        <label class="control-label col-xs-5" for="question9">9</label>
+        <div class="col-xs-3">
+        <input type="number" class="form-control" id="question9" min="1" max="5" placeholder="">
+        </div>
+      </div>
+
+      <div class="form-group input-sm">
+        <label class="control-label col-xs-5" for="question10">10</label>
+        <div class="col-xs-3">
+        <input type="number" class="form-control" id="question10"  min="1" max="5" placeholder="">
+        </div>
+      </div>
+      <br/>
+      <button type="submit" class="btn btn-primary">Calculate</button>
+    </form>
+    </div>
+    
+
+    
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="./js/bootstrap.min.js"></script>
+    <script>
+    $(function(){
+      $('#sus_form').submit(function(){
+        values = new Array();
+        values.push(parseInt($('#question1').val()));
+        values.push(parseInt($('#question2').val()));
+        values.push(parseInt($('#question3').val()));
+        values.push(parseInt($('#question4').val()));
+        values.push(parseInt($('#question5').val()));
+        values.push(parseInt($('#question6').val()));
+        values.push(parseInt($('#question7').val()));
+        values.push(parseInt($('#question8').val()));
+        values.push(parseInt($('#question9').val()));
+        values.push(parseInt($('#question10').val()));
+        
+        sus = calculateSUS(values)
+        alert('SUS score is '+sus+'.')
+        return false;
+      });
+    
+      function alert(message){
+        alert_container = document.getElementById("alerts")
+        alert_container.innerHTML = '<div class="alert alert-warning alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>'+message+'</div>'
+      
+      }
+      function calculateSUS(answers){
+        acumulator = 0;
+        $.each(answers, function(index, value){
+          if ((index%2) == 0){
+            acumulator += value - 1;
+          }
+          else{
+            acumulator += 5-value;
+          }
+        });
+        return acumulator*2.5;
+      }
+    });
+    </script>
+  </body>
+</html>
