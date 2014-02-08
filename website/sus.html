@@ -103,26 +103,33 @@
     $(function(){
       $('#sus_form').submit(function(){
         values = new Array();
-        values.push(parseInt($('#question1').val()));
-        values.push(parseInt($('#question2').val()));
-        values.push(parseInt($('#question3').val()));
-        values.push(parseInt($('#question4').val()));
-        values.push(parseInt($('#question5').val()));
-        values.push(parseInt($('#question6').val()));
-        values.push(parseInt($('#question7').val()));
-        values.push(parseInt($('#question8').val()));
-        values.push(parseInt($('#question9').val()));
-        values.push(parseInt($('#question10').val()));
-        
-        sus = calculateSUS(values)
-        alert('SUS score is '+sus+'.')
+        errorFlag = false;
+        $.each($('input'), function(index, element){
+          value = parseInt($(element).val());
+          if(isNaN(value)){
+            errorFlag = true;
+          }
+          values.push(value);
+        });
+        if(errorFlag){
+          error('<strong>Error:</strong> Please insert all the answers.')
+        }
+        else{
+          sus = calculateSUS(values);
+          alert('SUS score is '+sus+'.');
+        }
         return false;
       });
     
-      function alert(message){
+      function error(message){
+        alert(message, 'danger')
+      }  
+      function alert(message, type){
+        if(type == undefined){
+          type = "success"
+        }
         alert_container = document.getElementById("alerts")
-        alert_container.innerHTML = '<div class="alert alert-warning alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>'+message+'</div>'
-      
+        alert_container.innerHTML = '<div class="alert alert-'+type+' alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>'+message+'</div>'
       }
       function calculateSUS(answers){
         acumulator = 0;
