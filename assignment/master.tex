@@ -2,7 +2,7 @@
 
 \usepackage{cruz_article}
 
-\renewcommand{\arraystretch}{2}
+\renewcommand{\arraystretch}{1.5}
 
 \title{User Interface Evaluation of the CP's Website\\ (Proposal)}
 \author[1]{Luís  Cruz}
@@ -19,7 +19,7 @@
 This document proposes an usability evaluation for the website of the company \emph{CP -- Comboios de Portugal}.
 One analytical method and one empirical method are going to be applied in this evaluation: \emph{Heuristic Evaluation} and the \emph{Usability Test}, respectively, both described in this document.
   
-Through the Heuristic evaluation it was possible to find 11\todo{fixme number} issues in the user interface. From these issues, 3 are considered to be major usability problems and must be fixed with high priority.
+Through the Heuristic evaluation two experts found 15 issues in the user interface. From these issues, 4 are considered to be major usability problems and must be fixed with high priority.
 
 As a result of the usability test a report complying with the CIF standards, an usability test plan, and a usability post-test questionnaire were produced. The usability test quantitively assessed the efficiency, efficacy and satisfaction measures of the system. It also provided some useful insights about the usability of the website and spotted some important issues that have to be fixed in order improve usability. The overall user's satisfaction website was classified as good. 
 
@@ -102,9 +102,9 @@ This method proceeds by having a small set of evaluators judging the system acco
 	\item Help and documentation.
 \end{itemize}
 
-Heuristic evaluation was originally developed for evaluators who had some knowledge in usability but who were not necessarily usability experts~\citep{nielsen1990heuristic}, however, it has been showed that the method is also very effective for expert evaluators~\citep{nielsen1992finding}.
+Heuristic evaluation was originally developed for evaluators who had some knowledge in usability but who were not necessarily usability experts~\citep{nielsen1990heuristic}, however, it has been showed that the method is also very effective for expert evaluators~\citep{nielsen1992finding}. In this evaluation 2 expert evaluators have participated.
 
-In order to group the findings of this heuristic evaluation, the severity ranking proposed by \citet{nielsen1995rating} with a scale from 0 to 4:
+In order to group the findings of this heuristic evaluation, the severity ranking proposed by \citet{nielsen1995rating} was adopted, with a scale from 0 to 4:
 
 \begin{enumerate}[start=0, label={\theenumi{} -}]
 \item I don't agree that this is a usability problem at all;
@@ -122,38 +122,46 @@ In this evaluation, two experienced evaluators were asked to focus on the interf
 
 \subsection{Results}
 
-After completing the heuristic evaluation \todo{number of problems} 11 problems were found. They were sorted in table~\ref{tab:heuristic_results} according to the severity rating.
+After completing the heuristic evaluation 15 problems were found. They were sorted in table~\ref{tab:heuristic_results} according to the severity rating.
 \begin{table}[h]
 \begin{center}
   \footnotesize
-\begin{tabular}{c | p{8cm} | c | p{4.5cm}}
+\begin{tabular}{c | p{8cm} | c | p{4.5cm} }
   \hline
-	\# & Problem & \parbox[c]{1cm}{Severity Rating} & Violated Heuristic(s)  \\
+	\# & Problem & \parbox[c]{1cm}{Severity Rating} & Violated Heuristic(s) \\
 	\hline
 	
-		1  &  The ``Timetable and Prices" form is very similar with the form for buying tickets. Non expert users might not notice the difference.    & \cellcolor{red!25} 3 & Error prevention.  \\
+		1  &  The ``Timetable and Prices" form is very similar with the form for buying tickets. Non expert users might not notice the difference.    & \cellcolor{red!25} 3 & Error prevention. \\
 		
 		2 &  There is an auto complete feature in the ``Timetable and Prices'' and netTicket forms, which whenever the user misspells a letter of the station name, the system may complete with another station's name, and the user has to hit the backspace button one more time than usual. & \cellcolor{red!25} 3 & Error prevention; Help users recognize, diagnose, and recover from errors.\\
 	
-  3   & The seat selection is made in a uncommon way. One has to first click on the previous seat and then on the desired seat.  & \cellcolor{red!25} 3 &  Consistency and standards.  \\
+  3   & The seat selection is made in a uncommon way. One has to first click on the previous seat and then on the desired seat.  & \cellcolor{red!25} 3 &  Consistency and standards.\\
   
-		4  & The services of trains are defined as acronyms which are not used by the users (eg., IC means Intercidades)  &\cellcolor{orange!20} 2  &  Consistency and standards; Match between system and the real world.  \\
+    4   & When inserting random values into the payment form, the system crashes but does not notify the user about the error.  & \cellcolor{red!25} 3 &  Help users recognize, diagnose, and recover from errors.\\
+  
+		5  & The services of trains are defined as acronyms which are not used by the users (eg., IC means Intercidades)  &\cellcolor{orange!20} 2  &  Consistency and standards; Match between system and the real world.\\
 	
 
-	5  &  When an unregistered user wants to buy a ticket after choosing a specific train, the system asks him/her to register but after finishing the registration, he/she has to search again for the same train.    & \cellcolor{orange!20} 2 &  Recognition rather than recall. \\
+	6 &  When an unregistered user wants to buy a ticket after choosing a specific train, the system asks him/her to register but after finishing the registration, he/she has to search again for the same train.    & \cellcolor{orange!20} 2 &  Recognition rather than recall. \\
 
-6 &  In order to check the price in the timetable it is necessary to click in a link which when clicked replaces itself into the respective price, but only for one train at a time. & \cellcolor{orange!20} 2 & Flexibility and efficiency of use.\\
+7 &  In order to check the price in the timetable it is necessary to click in a link which when clicked replaces itself into the respective price, but only for one train at a time. & \cellcolor{orange!20} 2 & Flexibility and efficiency of use.\\
 
 
-7 &  When searching for a traveling ticket to buy, the user selects whether is traveling in first or second class in the beginning of the search. It is defined as second class by default and might not be perceptible. Through the next steps the user cannot change it. & \cellcolor{orange!20} 2 & User control and freedom.\\
+8 &  When searching for a traveling ticket to buy, the user selects whether is traveling in first or second class in the beginning of the search. It is defined as second class by default and might not be perceptible. Through the next steps the user cannot change it. & \cellcolor{orange!20} 2 & User control and freedom.\\
 
-8 & In the buying process there is no back button, besides the one provided by the browser that is not recommended by the system since he presents an alert warning that the user is about to leave the page. & \cellcolor{orange!20}2 & User control and freedom.\\
+9 & In the buying process there is no back button, besides the one provided by the browser that is not recommended by the system since he presents an alert warning that the user is about to leave the page. & \cellcolor{orange!20}2 & User control and freedom. \\
 
-9  &  In the timetable results, there is a clickable down arrow that does not do anything  & \cellcolor{yellow!10} 1 &  Aesthetic and minimalist design; Consistency and standards.  \\
+10 & Too much information is displayed and the netTicket form does not have a relevant place in the UI. &  \cellcolor{orange!20}2 & Aesthetic and minimalist design\\
 
-	10  &  There is a Time input field when in the form ``Timetables and Prices'', which might be unnecessary and provides no useful filtering in the results.  & \cellcolor{yellow!10} 1 &  Aesthetic and minimalist design.  \\
+11 & When buying a ticket there is a form for ``extra seat options'' that has 3 dropdowns which, in order to know their meaning the user has to click on it first. &  \cellcolor{orange!20}2 & Match between system and the real world\\
+
+12 & Too much information is displayed and the netTicket form does not have a relevant place in the UI. &  \cellcolor{orange!20}2 & Aesthetic and minimalist design\\
+
+13  &  When selecting a discount option, the price remains equal and the user as no clue about the final price unless he follows to the next step. & \cellcolor{yellow!10} 1 &  Match between system and the real world; Consistency and standards. \\
+
+	14  &  There is a Time input field when in the form ``Timetables and Prices'', which might be unnecessary and provides no useful filtering in the results.  & \cellcolor{yellow!10} 1 &  Aesthetic and minimalist design. \\
 	
-		11 &  In the timetable results there is a number identifying the row that does not provide any useful information & \cellcolor{yellow!10} 1 & Aesthetic and minimalist design.\\
+15 &  In the timetable results there is a number identifying the row that does not provide any useful information & \cellcolor{yellow!10} 1 & Aesthetic and minimalist design. \\
 	
 \hline
 \end{tabular}
@@ -270,7 +278,7 @@ Another change that could be made is related with the interviews made after each
 % ------------ RESULTS ------------ %
 \section{Conclusions and Future Work}
 
-This document reported the usability evaluation of CP.pt website. The \emph{Heuristic Evaluation} was very effective, it allowed to find 11\todo{FIXME} usability problems, from which 3 were considered to be high priority fixes. Besides, it was very cheap and easy to prepare. Before proceeding to the usability test, this issued should have been fixed.
+This document reported the usability evaluation of CP.pt website. The \emph{Heuristic Evaluation} was very effective, it allowed to find 15 usability problems, from which 3 were considered to be high priority fixes. Besides, it was very cheap and easy to prepare. Before proceeding to the usability test, this issued should have been fixed.
 
 The usability test provided was carefully prepared and two college students participated in the experiment.
 An usability test plan with some guidelines, a post-test questionnaire, a SUS questionnaire, and a data logging form were developed to get a very detailed information about the usability.
