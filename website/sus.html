@@ -18,11 +18,10 @@
     <div class="page-header">
       <h1>SUS Score Calculator <small><a target='_blank' href='http://www.measuringusability.com/sus.php'>More info</a></small></h1>
     </div>
-    <style>
-    </style>
-    <div class="containter center-block" style="max-width:400px">
+    
+    <div class="containter center-block clearfix" style="max-width:400px">
     <div id="alerts"></div>
-    <form id='sus_form' class="form-horizontal text-center center-block input-sm small" role="form">
+    <form id='sus_form' class="form-horizontal text-center input-sm small " role="form">
       <div class="form-group input-sm">
         <label class="control-label col-xs-5" for="question1">1</label>
         <div class="col-xs-3">
@@ -88,11 +87,24 @@
         <input type="number" class="form-control" id="question10"  min="1" max="5" placeholder="">
         </div>
       </div>
-      <br/>
-      <button type="submit" class="btn btn-primary">Calculate</button>
+
+      <div class="row">
+      <button type="submit" class="btn btn-primary col-xs-4 col-xs-offset-4">Calculate</button>
+</div>
     </form>
     </div>
-    
+    <br/>
+    <div class="navbar navbar-default">
+      <small class="navbar-text"> 
+        &copy; 2014. Brought to you by <a href="http://luiscruz.pt.vu/" class="">Luis Cruz</a>.  MIT License.
+      </small>
+      <small class="navbar-text navbar-right"> 
+        Made with 
+        <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>.
+        Source code available at
+        <a class="" href="https://github.com/luiscruz/cp_usability_evaluation/" target="_blank">Github</a>.&nbsp;&nbsp;
+      </small>
+    </div>
 
     
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
